@@ -1,14 +1,13 @@
 name: 'loan-analysis'
 channels:
   - conda-forge
-  - defaults
+  # - defaults
 dependencies:
   - python>=3.11,<3.13  
   - pip
   - ipykernel
   - nb_conda_kernels
-  - otter-grader=6.*  
-  - altair-all=5.4.* 
+  - altair=5.4.* 
   - vega_datasets
   - scipy
   - matplotlib>=3.2.2
@@ -16,17 +15,17 @@ dependencies:
   - requests>=2.24.0
   - graphviz
   - python-graphviz
-  - eli5
-  - shap>=0.45 
+  # - eli5
+  # - shap>=0.45 
   - jinja2
   - lightgbm
   - spacy
   - xgboost
-  - catboost
+  # - catboost
   - nltk
   - kaggle
   - imbalanced-learn
-  - pip:
-    - mglearn
-    - spacymoji
-    - altair_ally>=0.1.1  
+  # - pip:
+  #   - mglearn
+  #   - spacymoji
+  #   - altair_ally>=0.1.1  
