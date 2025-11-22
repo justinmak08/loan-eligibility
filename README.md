@@ -60,10 +60,8 @@ This project implements an end-to-end pipeline for building a loan eligibility c
 
 Launch Jupyter and open the analysis notebook:
 ```bash
-jupyter lab analysis.ipynb
+jupyter lab loan-analysis.ipynb
 ```
-
-> **Note**: Notebook will be renamed to reflect final analysis structure before submission.
 
 ## License
 
