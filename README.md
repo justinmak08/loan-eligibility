@@ -1,41 +1,90 @@
-## **Loan Eligibility Prediction**
+# Loan Eligibility Prediction
 
-This project investigates whether a loan applicant is likely to be eligible for a loan based on the information they provide. It includes data exploration, model development, documentation, and an environment setup that allows others to fully reproduce the analysis.
+A machine learning project that predicts loan eligibility based on applicant information using logistic regression. This repository provides a complete, reproducible workflow from data exploration to model deployment.
 
-## **Project Summary**
+## Project Overview
 
-At a high level, this project provides a complete workflow for building a loan eligibility classifier. The work begins with loading the main dataset located in the data folder. From there, exploratory analysis is performed to understand trends and relationships within the data. A logistic regression model is then trained to predict eligibility and the final trained model is saved in the models folder. Supporting scripts for EDA, data fetching, and model training are located in the scripts directory, while two Jupyter notebooks document the main exploratory and modelling workflow. This repository also includes documentation files, licensing information, and a reproducible environment file.
+This project implements an end-to-end pipeline for building a loan eligibility classifier:
 
-## **How to Run the Data Analysis**
+1. **Data Ingestion**: Load and fetch datasets from Kaggle using the API
+2. **Exploratory Data Analysis**: Analyze trends, distributions, and relationships in applicant data
+3. **Model Training**: Build and train a logistic regression classifier
+4. **Model Persistence**: Save trained models for deployment and reproducibility
+5. **Model Prediction**: Generated views to check how good the trained model is
 
-Setting up and activating the environment:
-
-``` bash
-conda env create -f environment.yml
-conda activate loan_env
+### Repository Structure
+```
+.
+├── data/              # Raw and processed datasets
+├── models/            # Trained model artifacts (.pkl files)
+├── scripts/           # Modular Python scripts for data fetching and model training
+├── eda.ipynb          # Exploratory data analysis notebook
+├── analysis.ipynb     # Main analysis and modeling notebook
+├── environment.yml    # Conda environment specification
+├── CODE_OF_CONDUCT.md # Community guidelines
+├── CONTRIBUTING.md    # Contribution guidelines
+└── LICENSE            # Project licenses
 ```
 
-Running the notebooks or Python scripts:
+## Getting Started
 
-``` bash
-jupyter notebook
-python scripts/eda.py
-python scripts/train_model.py
+### Prerequisites
+
+- [Conda](https://docs.conda.io/en/latest/) package manager
+- Jupyter Lab or Jupyter Notebook (install via `conda install jupyterlab`)
+- [Kaggle account](https://www.kaggle.com) for dataset access
+
+### Installation
+
+1. **Clone the repository**
+```bash
+   git clone git@github.com:tanav2202/loan-eligibility.git
+   cd loan-eligibility
 ```
 
-## **Dependencies Needed to Run the Analysis**
-
-Installing the dependencies from the environment.yml file:
-
-``` bash
-conda env create -f environment.yml
-conda activate loan_env
+2. **Create and activate the conda environment**
+```bash
+   conda env create -f environment.yml
+   conda activate loan-analysis
 ```
 
-## **Licenses**
+3. **Configure Kaggle API**
+   - Create a Kaggle account at [kaggle.com](https://www.kaggle.com)
+   - Navigate to your account settings and create an API token
+   - Download the `kaggle.json` credentials file
+   - Place it in `~/.kaggle/` (create the directory if it doesn't exist)
+   
+   For detailed setup instructions, see the [Kaggle API documentation](https://www.kaggle.com/discussions/getting-started/524433).
 
-The repository contains two types of licenses. All code used in the project is covered under the MIT License, which allows others to use, modify, and distribute the code with proper attribution. All reports and documentation, including this README, fall under the CC0 1.0 Universal license, which places the written documentation in the public domain. Full licensing details are located in the LICENSE file.
+### Running the Analysis
 
-## **Contributors / Authors**
+Launch Jupyter and open the analysis notebook:
+```bash
+jupyter lab analysis.ipynb
+```
 
-The project was created by Ali Boloor, Gurleen Kaur, Justin Mak, and Tanav Singh Bajaj. Each contributor worked on different parts of the repository through their individual feature branches, including data exploration, commentary, model training, and project documentation.
+> **Note**: Notebook will be renamed to reflect final analysis structure before submission.
+
+## License
+
+This project uses a dual-license structure:
+
+- **Code**: Licensed under the [MIT License](LICENSE) - free to use, modify, and distribute with attribution
+- **Documentation**: Licensed under [CC0 1.0 Universal](LICENSE) - public domain dedication for all written materials and reports
+
+See the [LICENSE](LICENSE) file for complete details.
+
+## Contributors
+
+This project was developed collaboratively by:
+
+- **Tanav Singh Bajaj**
+- **Ali Boloor**
+- **Gurleen Kaur**
+- **Justin Mak**
+
+Each team member contributed through feature branches covering data exploration, model development, documentation, and project infrastructure.
+
+## Acknowledgments
+
+Dataset sourced from Kaggle. Special thanks to the MDS program at UBC for project guidance and support.
